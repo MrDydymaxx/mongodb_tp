@@ -214,7 +214,19 @@ ___
 
 
 - 23 Write a MongoDB query to find the restaurant Id, name, and grades for those restaurants which achieved a grade of "A" and scored 11 on an ISODate "2014-08-11T00:00:00Z" among many of survey dates
+
+```sh
+db.restaurants.find( {"grades.date": ISODate("2014-08-11T00:00:00Z"), "grades.grade":"A" , "grades.score" : 11}, {"restaurant_id" : 1,"name":1,"grades":1}).pretty();
+```
+___
+
+
 - 24 Write a MongoDB query to find the restaurant Id, name and grades for those restaurants where the 2nd element of grades array contains a grade of "A" and score 9 on an ISODate "2014-08-11T00:00:00Z"
+
+```sh
+db.restaurants.find( { "grades.1.date": ISODate("2014-08-11T00:00:00Z"), "grades.1.grade":"A" , "grades.1.score" : 9}, {"restaurant_id" : 1,"name":1,"grades":1}).pretty();
+```
+
 - 25 Write a MongoDB query to find the restaurant Id, name, address and geographical location for those restaurants where 2nd element of coord array contains a value which is more than 42 and upto 52
 - 26 Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns
 - 27 Write a MongoDB query to arrange the name of the restaurants in descending along with all the columns
