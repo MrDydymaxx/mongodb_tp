@@ -63,6 +63,11 @@ $ db.restaurants.find({}, { restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _
 ```
 
 - 5 Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field _id for all the documents in the collection restaurant
+
+```sh
+$ db.restaurants.find({},{"restaurant_id" : 1,"name":1,"borough":1,"address.zipcode" :1,"_id":0}).pretty();
+```
+
 - 6 Write a MongoDB query to display all the restaurant which is in the borough Bronx
 - 7 Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx
 - 8 Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the borough Bronx
