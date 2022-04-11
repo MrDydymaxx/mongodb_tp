@@ -87,6 +87,11 @@ $ db.restaurants.find({"borough": "Bronx"}).skip(5).limit(5).pretty();
 ```
 
 - 9 Write a MongoDB query to find the restaurants who achieved a score more than 90
+
+```sh
+$ db.restaurants.find({grades : { $elemMatch:{"score":{$gt : 80}}}});
+```
+
 - 10 Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less than 100
 - 11 Write a MongoDB query to find the restaurants which locate in latitude value less than -95.754168
 - 12 Write a MongoDB query to find the restaurants that do not prepare any cuisine of 'American' and their grade score more than 70 and latitude less than -65.754168
