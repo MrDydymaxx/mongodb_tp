@@ -52,6 +52,11 @@ $ mongoimport --db ny --collection restaurants --file restaurants.json
 ```
 
 - 4 Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field _id for all the documents in the collection restaurant
+
+```sh
+**db.restaurants.find({}, { restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0 }).pretty();**
+```
+
 - 5 Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field _id for all the documents in the collection restaurant
 - 6 Write a MongoDB query to display all the restaurant which is in the borough Bronx
 - 7 Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx
