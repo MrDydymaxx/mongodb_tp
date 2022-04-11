@@ -69,6 +69,11 @@ $ db.restaurants.find({},{"restaurant_id" : 1,"name":1,"borough":1,"address.zipc
 ```
 
 - 6 Write a MongoDB query to display all the restaurant which is in the borough Bronx
+
+```sh
+$ db.restaurants.find({"borough": "Bronx"}).pretty();
+```
+
 - 7 Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx
 - 8 Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the borough Bronx
 - 9 Write a MongoDB query to find the restaurants who achieved a score more than 90
