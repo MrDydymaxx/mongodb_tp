@@ -172,6 +172,11 @@ ___
 
 
 - 18 Write a MongoDB query to find the restaurants which belong to the borough Bronx and prepared either American or Chinese dish
+
+```sh
+db.restaurants.find({ "borough": "Bronx" , $or : [{ "cuisine" : "American " },{ "cuisine" : "Chinese" }]}).pretty();
+```
+
 - 19 Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which belong to the borough Staten Island or Queens or Bronxor Brooklyn
 - 20 Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which are not belonging to the borough Staten Island or Queens or Bronxor Brooklyn
 - 21 Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which achieved a score which is not more than 10
