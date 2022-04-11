@@ -45,6 +45,11 @@ $ db.restaurants.find().pretty();
 ```
 
 - 2 Write a MongoDB query to display only one document
+
+```sh
+$ db.restaurants.findOne();
+```
+
 - 3 Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant
 
 ```sh
