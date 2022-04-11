@@ -81,6 +81,11 @@ $ db.restaurants.find({"borough": "Bronx"}).limit(5).pretty();
 ```
 
 - 8 Write a MongoDB query to display the next 5 restaurants after skipping first 5 which are in the borough Bronx
+
+```sh
+$ db.restaurants.find({"borough": "Bronx"}).skip(5).limit(5).pretty();
+```
+
 - 9 Write a MongoDB query to find the restaurants who achieved a score more than 90
 - 10 Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less than 100
 - 11 Write a MongoDB query to find the restaurants which locate in latitude value less than -95.754168
