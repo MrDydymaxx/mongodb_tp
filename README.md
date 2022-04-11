@@ -112,6 +112,10 @@ db.restaurants.find({$and:[{"cuisine" : {$ne :"American "}},{"grades.score" : {$
 
 - 13 Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American' and achieved a score more than 70 and located in the longitude less than -65.754168
 
+```sh
+db.restaurants.find({"cuisine" : {$ne : "American "},"grades.score" :{$gt: 70},"address.coord" : {$lt : -65.754168}}).pretty();
+```
+
     > Note: Do this query without using $and operator
 
 - 14 Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belongs to the borough Brooklyn. The document must be displayed according to the cuisine in descending order
