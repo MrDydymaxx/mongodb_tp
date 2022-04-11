@@ -100,7 +100,7 @@ ___
 - 9 Write a MongoDB query to find the restaurants who achieved a score more than 90
 
 ```sh
-db.restaurants.find({grades : { $elemMatch:{"score":{$gt : 90}}}});
+db.restaurants.find({grades : { $elemMatch:{"score":{$gt : 90}}}}).pretty();
 ```
 ___
 
