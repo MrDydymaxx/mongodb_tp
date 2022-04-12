@@ -289,3 +289,8 @@ ___
 
 
 - 32 Write a MongoDB query to find the restaurant name, borough, longitude and attitude and cuisine for those restaurants which contains 'mon' as three letters somewhere in its name
+
+```sh
+db.restaurants.find({ name : { $regex : "mon.*", $options: "i" } },{"name":1,"borough":1,"address.coord":1,"cuisine" :1}).pretty();
+```
+___
