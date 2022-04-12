@@ -249,6 +249,13 @@ ___
 
 
 - 27 Write a MongoDB query to arrange the name of the restaurants in descending along with all the columns
+
+```sh
+db.restaurants.find().sort({"name":-1}).pretty();
+```
+___
+
+
 - 28 Write a MongoDB query to arranged the name of the cuisine in ascending order and for that same cuisine borough should be in descending order
 - 29 Write a MongoDB query to know whether all the addresses contains the street or not
 - 30 Write a MongoDB query which will select all documents in the restaurants collection where the coord field value is Double
