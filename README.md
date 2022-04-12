@@ -227,13 +227,27 @@ ___
 db.restaurants.find( { "grades.1.date": ISODate("2014-08-11T00:00:00Z"), "grades.1.grade":"A" , "grades.1.score" : 9}, {"restaurant_id" : 1,"name":1,"grades":1}).pretty();
 ```
 
+___
+
+
 - 25 Write a MongoDB query to find the restaurant Id, name, address and geographical location for those restaurants where 2nd element of coord array contains a value which is more than 42 and upto 52
 
 ```sh
 db.restaurants.find( { "address.coord.1": {$gt : 42, $lte : 52}},{"restaurant_id" : 1,"name":1,"address":1,"coord":1}).pretty();
 ```
 
+___
+
+
 - 26 Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns
+
+```sh
+db.restaurants.find().sort({"name":1}).pretty();
+```
+
+___
+
+
 - 27 Write a MongoDB query to arrange the name of the restaurants in descending along with all the columns
 - 28 Write a MongoDB query to arranged the name of the cuisine in ascending order and for that same cuisine borough should be in descending order
 - 29 Write a MongoDB query to know whether all the addresses contains the street or not
