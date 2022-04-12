@@ -273,5 +273,12 @@ ___
 
 
 - 30 Write a MongoDB query which will select all documents in the restaurants collection where the coord field value is Double
+
+```sh
+db.restaurants.find({"address.coord" : {$type : 1}}).pretty();
+```
+___
+
+
 - 31 Write a MongoDB query which will select the restaurant Id, name and grades for those restaurants which returns 0 as a remainder after dividing the score by 7
 - 32 Write a MongoDB query to find the restaurant name, borough, longitude and attitude and cuisine for those restaurants which contains 'mon' as three letters somewhere in its name
